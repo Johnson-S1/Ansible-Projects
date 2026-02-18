@@ -1,0 +1,5 @@
+---
+# vars file for lvmprov
+my_needs: 
+  - { fs: /dev/joe/part1, dir: /data }   
+  - { fs: /dev/joe/part2, dir: /pro }

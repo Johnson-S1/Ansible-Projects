@@ -1,0 +1,24 @@
+---
+# tasks file for webdeploy
+- name: "apache"
+  package: 
+    name: "httpd"
+    state: present
+  when: ansible_distribution == "RedHat" or ansible_distribution == "CentOS"
+
+
+- name: "New_html_root"
+  file:
+    path: "/var/www/test/html"
+    state: directory
+    owner: apache
+    group: apache
+    recurse: yes
+  notify: start
+
+- name: "conf_template"
+  template:
+    src: site.conf.j2
+    dest: "/etc/httpd/conf.d/site.conf"
+  notify: start
+    

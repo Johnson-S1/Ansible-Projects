@@ -1,0 +1,4 @@
+---
+# tasks file for lvmprov
+- import_tasks: lv.yml
+- import_tasks: mkfs.yml

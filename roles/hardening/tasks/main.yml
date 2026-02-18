@@ -1,0 +1,6 @@
+---
+# tasks file for hardening
+- import_tasks: selinux.yml
+- import_tasks: ssh.yml
+- import_tasks: fwall.yml
+

@@ -1,0 +1,6 @@
+---
+# vars file for webdeploy
+ip: "*:80"
+html_root: "/var/www/test/html"
+
+

@@ -1,0 +1,12 @@
+---
+# handlers file for webdeploy
+- name: "start"
+  copy:
+    src: "/home/Joe/Ansible-Projects/roles/webdeploy/files/welcome.html"
+    dest: "/var/www/test/html"
+
+- name: "start"
+  systemd:
+    name: "httpd"
+    state: restarted
+    enabled: true

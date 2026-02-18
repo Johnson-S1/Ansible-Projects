@@ -1,0 +1,10 @@
+<VirtualHost {{ ip }}>
+  ServerName {{ server }}
+  DocumentRoot {{ html_root }}
+  <Directory {{ html_root }}>
+    Require all granted
+  </Directory>
+</VirtualHost>
+
+
+

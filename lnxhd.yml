@@ -1,0 +1,6 @@
+- name: "Linux hardening"
+  hosts: nodes
+  gather_facts: yes
+  become: yes
+  roles:
+    - hardening

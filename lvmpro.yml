@@ -1,0 +1,6 @@
+- name: lvmprovision
+  hosts: cent
+  gather_facts: yes
+  become: yes
+  roles:
+    - lvmprov

@@ -1,0 +1,14 @@
+- name: Allow_ssh
+  firewalld:
+    service: ssh
+    zone: public
+    permanent: true
+    state: enabled
+
+- name: Allow_http
+  firewalld:
+    service: http
+    zone: public
+    permanent: true
+    state: enabled
+    immediate: yes

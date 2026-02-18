@@ -1,0 +1,14 @@
+- name: format_filesystem
+  filesystem:
+    type: ext4
+    dev: "{{ item.fs }}"
+  loop: "{{ my_needs }}" 
+  notify: mount_point
+
+- name: mount
+  mount:
+    path: "{{ item.dir }}" 
+    fstype: ext4
+    src: "{{ item.fs }}"
+    state: mounted
+  loop: "{{ my_needs }}"

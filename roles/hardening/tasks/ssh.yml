@@ -1,0 +1,8 @@
+- name: ssh_conf
+  template: 
+    src: ssh_hardening.conf.j2
+    dest: /etc/ssh/sshd_config.d/hardening.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: ssh_restart 

@@ -1,0 +1,6 @@
+- name: web_deploying
+  hosts: nodes
+  gather_facts: yes
+  become: yes
+  roles:
+    - webdeploy

@@ -1,0 +1,7 @@
+---
+# handlers file for hardening
+- name: ssh_restart
+  systemd:
+    name: sshd
+    state: restarted
+    enabled: yes

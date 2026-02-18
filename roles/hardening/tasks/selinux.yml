@@ -1,0 +1,12 @@
+#SELINUX VALIDATION
+- name: SE_Status
+  command:
+    cmd: getenforce
+  register: status
+
+- name: SE_Enforcing
+  selinux:
+    policy: targeted
+    state: enforcing
+  when: status.stdout == "Disabled"
+ 
